@@ -1,4 +1,7 @@
-# Default ignored files
+
+* text=auto
+*.bat text eol=crlf
+
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
