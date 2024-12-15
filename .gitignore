@@ -10,7 +10,7 @@
 /dataSources/
 /dataSources.local.xml
 
-/__pycache___
+/__pycache__
 /dataset
 /model
 /points

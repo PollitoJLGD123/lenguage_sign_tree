@@ -1,3 +1,4 @@
+
 import joblib
 import cv2
 import mediapipe as mp
@@ -14,6 +15,7 @@ mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 
+letra_inicial = "@"
 palabra = ""
 seguir = True
 
@@ -104,7 +106,7 @@ while True:
                                              args=("Presiona la letra 'C' para seguir escribiendo",))
                     hilo2.start()
 
-                if key_press == ord('r') and palabra!= "":
+                if key_press == ord('r') and palabra != "":
                     palabra = palabra[:-1]
                     say = "Letra eliminada"
                     hilo = threading.Thread(target=start_audio, args=(say,))
@@ -120,11 +122,18 @@ while True:
     cv2.putText(frame, f"Palabra Actual: {palabra}", (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (130, 140, 255), 2, cv2.LINE_AA)
 
-    cv2.putText(frame, "Presiona 'S' para guardar una letra", (50, h - 100),
+    word_frame = np.zeros((300, 640, 3), dtype=np.uint8)
+    cv2.putText(word_frame, f"Palabra: {palabra}", (50, 150),
+                cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 3, cv2.LINE_AA)
+    cv2.imshow('Palabra Formada', word_frame)
+
+    cv2.putText(frame, "Presiona 'S' para guardar una letra", (50, h - 120),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
-    cv2.putText(frame, "Presiona 'T' para finalizar la palabra", (50, h - 70),
+    cv2.putText(frame, "Presiona 'T' para finalizar la palabra", (50, h - 90),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
-    cv2.putText(frame, "Presiona 'R' para eliminar una letra", (50, h - 40),
+    cv2.putText(frame, "Presiona 'R' para eliminar una letra", (50, h - 60),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
+    cv2.putText(frame, "Presiona 'Q' para salir", (50, h - 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
 
     cv2.imshow('frame', frame)

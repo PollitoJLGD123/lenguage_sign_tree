@@ -5,14 +5,23 @@ from sklearn.metrics import accuracy_score
 import numpy as np
 import h5py
 import joblib
+import os
 from sklearn.preprocessing import LabelEncoder
+
+rutita = "./model"
 
 with h5py.File('./points/data.h5', 'r') as f:
     data = f['data'][:]
     labels = f['labels'][:]
 
+print(data)
+print(labels)
+
 data = np.asarray(data)
 labels = np.asarray(labels)
+
+print(data)
+print(labels)
 
 encoder = LabelEncoder()
 labels = encoder.fit_transform(labels)
@@ -29,5 +38,8 @@ score = accuracy_score(y_predict, y_test)
 
 print(f'{score * 100}% de Prediccion Correcta !')
 
-joblib.dump(model, './model/modelo.joblib')
-joblib.dump(encoder, './model/labels.joblib')
+if not os.path.exists(rutita):
+    os.makedirs(rutita)
+
+joblib.dump(model, f'{rutita}/modelo.joblib')
+joblib.dump(encoder, f'{rutita}/labels.joblib')
