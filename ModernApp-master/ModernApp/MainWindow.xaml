@@ -55,7 +55,7 @@
                              Command="{Binding DiscoveryViewCommand}"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked" />
 
-                <RadioButton Content="Writing Sentence"
+                <RadioButton Content="Consulta a Señas"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
