@@ -10,10 +10,49 @@
 
   <ItemGroup>
     <None Remove="Fonts\PressStart2P-Regular.ttf" />
+    <None Remove="Images\3B.png" />
+    <None Remove="Images\Frm2.png" />
+    <None Remove="Images\lenguage.png" />
+    <None Remove="Images\sign_sen.png" />
+    <None Remove="Signs\a.jpg" />
+    <None Remove="Signs\b.jpg" />
+    <None Remove="Signs\c.jpg" />
+    <None Remove="Signs\d.jpg" />
+    <None Remove="Signs\e.jpg" />
+    <None Remove="Signs\f.jpg" />
+    <None Remove="Signs\g.jpg" />
+    <None Remove="Signs\h.jpg" />
+    <None Remove="Signs\i.jpg" />
+    <None Remove="Signs\j.jpg" />
+    <None Remove="Signs\k.jpg" />
+    <None Remove="Signs\l.jpg" />
+    <None Remove="Signs\m.jpg" />
+    <None Remove="Signs\n.jpg" />
+    <None Remove="Signs\o.jpg" />
+    <None Remove="Signs\p.jpg" />
+    <None Remove="Signs\q.jpg" />
+    <None Remove="Signs\r.jpg" />
+    <None Remove="Signs\s.jpg" />
+    <None Remove="Signs\space.jpg" />
+    <None Remove="Signs\t.jpg" />
+    <None Remove="Signs\u.jpg" />
+    <None Remove="Signs\v.jpg" />
+    <None Remove="Signs\w.jpg" />
+    <None Remove="Signs\x.jpg" />
+    <None Remove="Signs\y.jpg" />
+    <None Remove="Signs\z.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\3B.png" />
+    <Resource Include="Images\Frm2.png" />
+    <Resource Include="Images\lenguage.png" />
+    <Resource Include="Images\sign_sen.png" />
+    <Resource Include="Signs\a.jpg" />
+    <Resource Include="Signs\b.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
 
@@ -21,6 +60,31 @@
     <Resource Include="Fonts\PressStart2P-Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Signs\c.jpg" />
+    <Resource Include="Signs\d.jpg" />
+    <Resource Include="Signs\e.jpg" />
+    <Resource Include="Signs\f.jpg" />
+    <Resource Include="Signs\g.jpg" />
+    <Resource Include="Signs\h.jpg" />
+    <Resource Include="Signs\i.jpg" />
+    <Resource Include="Signs\j.jpg" />
+    <Resource Include="Signs\k.jpg" />
+    <Resource Include="Signs\l.jpg" />
+    <Resource Include="Signs\m.jpg" />
+    <Resource Include="Signs\n.jpg" />
+    <Resource Include="Signs\o.jpg" />
+    <Resource Include="Signs\p.jpg" />
+    <Resource Include="Signs\q.jpg" />
+    <Resource Include="Signs\r.jpg" />
+    <Resource Include="Signs\s.jpg" />
+    <Resource Include="Signs\space.jpg" />
+    <Resource Include="Signs\t.jpg" />
+    <Resource Include="Signs\u.jpg" />
+    <Resource Include="Signs\v.jpg" />
+    <Resource Include="Signs\w.jpg" />
+    <Resource Include="Signs\x.jpg" />
+    <Resource Include="Signs\y.jpg" />
+    <Resource Include="Signs\z.jpg" />
   </ItemGroup>
 
 </Project>
