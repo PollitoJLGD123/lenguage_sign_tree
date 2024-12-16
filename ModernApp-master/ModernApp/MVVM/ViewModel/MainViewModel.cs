@@ -12,7 +12,6 @@ namespace ModernApp.MVVM.ViewModel
         public HomeViewModel HomeVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
         public FeaturedViewModel FeaturedVM { get; set; }
-
         public LetterViewModel LetterVM { get; set; }
 
         private object? _currentView;

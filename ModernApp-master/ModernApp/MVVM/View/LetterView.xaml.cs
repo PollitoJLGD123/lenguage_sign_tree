@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ModernApp.MVVM.View
 {
     /// <summary>
-    /// Lógica de interacción para LettersSigns.xaml
+    /// Lógica de interacción para LetterView.xaml
     /// </summary>
-    public partial class LettersSigns : UserControl
+    public partial class LetterView : UserControl
     {
-        public LettersSigns()
+        public LetterView()
         {
             InitializeComponent();
         }
