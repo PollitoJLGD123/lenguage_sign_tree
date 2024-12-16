@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5516ee39-236e-462c-ac75-9c3de5150436" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/llamada_python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/DiscoveryView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/DiscoveryView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llamada_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/llamada_python.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
       <updated>1734245924180</updated>
       <workItem from="1734245925583" duration="21508000" />
       <workItem from="1734280108749" duration="1299000" />
-      <workItem from="1734281428665" duration="40286000" />
+      <workItem from="1734281428665" duration="43778000" />
     </task>
     <servers />
   </component>

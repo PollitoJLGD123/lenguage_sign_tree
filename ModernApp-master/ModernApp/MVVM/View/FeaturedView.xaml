@@ -27,7 +27,7 @@
                FontFamily="Century Gothic"/>
 
         <!-- Input TextBox -->
-        <TextBox HorizontalAlignment="Left" 
+        <TextBox x:Name="txtPalabra" HorizontalAlignment="Left" 
              Margin="288,88,0,0" 
              VerticalAlignment="Top" 
              Width="176" 
@@ -41,23 +41,43 @@
              BorderThickness="1"
              TextChanged="TextBox_TextChanged"/>
 
-        <!-- Rectangle for Display -->
-        <Rectangle HorizontalAlignment="Left" 
-               VerticalAlignment="Top" 
-               Height="250" 
-               Width="568" 
-               Fill="#FFC6C1B6" 
-               Stroke="#C4C4C4" 
-               RadiusX="10" 
-               RadiusY="10"
-               Margin="81,140,0,0">
-            <Rectangle.Effect>
-                <DropShadowEffect BlurRadius="10" ShadowDepth="2" Color="#888888"/>
-            </Rectangle.Effect>
-        </Rectangle>
+        <!-- Contenedor para Rectangle e ItemsControl -->
+        <Grid HorizontalAlignment="Left" 
+          VerticalAlignment="Top" 
+          Height="250" 
+          Width="568" 
+          Margin="81,140,0,0">
 
-        <!-- Consult Button -->
-        <Button Content="Consultar" 
+            <!-- Rectangle como fondo -->
+            <Rectangle Fill="#FFC6C1B6" 
+                   Stroke="#C4C4C4" 
+                   RadiusX="10" 
+                   RadiusY="10">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="2" Color="#888888"/>
+                </Rectangle.Effect>
+            </Rectangle>
+
+            <!-- ItemsControl sobre el Rectangle -->
+            <ItemsControl x:Name="imagesControl" Margin="10">
+                <ItemsControl.ItemsPanel>
+                    <!-- Organiza las imágenes horizontalmente -->
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <!-- Plantilla para mostrar cada imagen -->
+                    <DataTemplate>
+                        <Image Source="{Binding}" Width="60" Height="60" Margin="5"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+        <!-- Button -->
+        <Button x:Name="btnConsultar" Content="Consultar" 
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
             Margin="520,84,0,0" 
@@ -69,7 +89,7 @@
             Foreground="White" 
             Background="#4CAF50" 
             BorderBrush="Transparent" 
-            Cursor="Hand">
+            Cursor="Hand" Click="Button_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="ButtonBorder" 
@@ -80,7 +100,6 @@
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <!-- MouseOver Trigger -->
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="ButtonBorder" Property="Background" Value="#5A8536"/>
                         </Trigger>
