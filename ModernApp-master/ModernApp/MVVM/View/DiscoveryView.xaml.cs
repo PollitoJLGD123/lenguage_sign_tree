@@ -33,9 +33,10 @@ namespace ModernApp.MVVM.View
                 // Configurar el proceso
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
-                    FileName = @"c:\Users\USUARIO\AppData\Local\Programs\Python\python312\python.exe",
-                    Arguments = "\"D:\\SISTEMAS\\CICLO VI\\Sistemas Inteligentes\\Semana 15\\lenguage_sign_tree\\testing.py\"",
-                    RedirectStandardOutput = true, // Capturar la salida del script
+                    //FileName = @"c:\Users\USUARIO\AppData\Local\Programs\Python\python312\python.exe",
+                    FileName = @"C:\Users\danie\AppData\Local\Programs\Python\Python311\python.exe",
+                    //Arguments = "\"D:\\SISTEMAS\\CICLO VI\\Sistemas Inteligentes\\Semana 15\\lenguage_sign_tree\\testing.py\"",                    RedirectStandardOutput = true, // Capturar la salida del script
+                    Arguments = "\"C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\testing.py\"",
                     RedirectStandardError = true, // Capturar errores del script
                     UseShellExecute = false, // No usar shell
                     CreateNoWindow = true // No crear ventana visible

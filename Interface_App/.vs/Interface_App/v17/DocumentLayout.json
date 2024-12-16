@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\UNT\\Ciclo 06\\Sistemas Inteligentes\\Proyect_Sklearn\\Interface_App\\",
+  "WorkspaceRootPath": "C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE88814D-683E-4782-B1FC-35030F397540}|Interface_App\\Interface_App.csproj|e:\\unt\\ciclo 06\\sistemas inteligentes\\proyect_sklearn\\interface_app\\interface_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CE88814D-683E-4782-B1FC-35030F397540}|Interface_App\\Interface_App.csproj|solutionrelative:interface_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Interface_App\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE88814D-683E-4782-B1FC-35030F397540}|Interface_App\\Interface_App.csproj|e:\\unt\\ciclo 06\\sistemas inteligentes\\proyect_sklearn\\interface_app\\interface_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE88814D-683E-4782-B1FC-35030F397540}|Interface_App\\Interface_App.csproj|solutionrelative:interface_app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Interface_App\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\UNT\\Ciclo 06\\Sistemas Inteligentes\\Proyect_Sklearn\\Interface_App\\Interface_App\\Form1.cs",
+              "DocumentMoniker": "C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs",
               "RelativeDocumentMoniker": "Interface_App\\Form1.cs",
-              "ToolTip": "E:\\UNT\\Ciclo 06\\Sistemas Inteligentes\\Proyect_Sklearn\\Interface_App\\Interface_App\\Form1.cs",
+              "ToolTip": "C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs",
               "RelativeToolTip": "Interface_App\\Form1.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T23:34:46.832Z",
               "EditorCaption": ""
@@ -37,9 +41,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\UNT\\Ciclo 06\\Sistemas Inteligentes\\Proyect_Sklearn\\Interface_App\\Interface_App\\Form1.cs",
+              "DocumentMoniker": "C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs",
               "RelativeDocumentMoniker": "Interface_App\\Form1.cs",
-              "ToolTip": "E:\\UNT\\Ciclo 06\\Sistemas Inteligentes\\Proyect_Sklearn\\Interface_App\\Interface_App\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Daniel\\Universidad\\Nueva carpeta\\CICLO 06\\SISTEMAS INTELIGENTES\\PYTHON\\PROYECTO_3eraUNIDAD\\lenguage_sign_tree\\Interface_App\\Interface_App\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Interface_App\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T23:00:48.159Z",

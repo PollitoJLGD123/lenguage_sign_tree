@@ -1,15 +1,15 @@
 
-import joblib
 import cv2
 import mediapipe as mp
 import numpy as np
-from audio_system import start_audio
+from .audio_system import start_audio
 import threading
+import joblib
 
 def todito():
-    model = joblib.load('./model/modelo.joblib')
-    encoder = joblib.load('./model/labels.joblib')
-
+    
+    model = joblib.load(r'C:\Daniel\Universidad\Nueva carpeta\CICLO 06\SISTEMAS INTELIGENTES\PYTHON\PROYECTO_3eraUNIDAD\lenguage_sign_tree\Django_prueba\web\interfaz\modelo\modelo.joblib')
+    encoder = joblib.load(r'C:\Daniel\Universidad\Nueva carpeta\CICLO 06\SISTEMAS INTELIGENTES\PYTHON\PROYECTO_3eraUNIDAD\lenguage_sign_tree\Django_prueba\web\interfaz\modelo\labels.joblib')
     cap = cv2.VideoCapture(0)
 
     mp_hands = mp.solutions.hands
@@ -137,7 +137,7 @@ def todito():
         cv2.putText(frame, "Presiona 'Q' para salir", (50, h - 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
 
-        cv2.imshow('frame', frame)
+        # cv2.imshow('frame', frame)
 
         _, buffer = cv2.imencode('.jpg', frame)
         frame = buffer.tobytes()
