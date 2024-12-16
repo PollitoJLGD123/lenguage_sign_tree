@@ -48,18 +48,25 @@
                              Command="{Binding HomeViewCommand}"
                              Style="{StaticResource MenuButtonTheme}" />
 
-                <RadioButton Content="Discovery"
+                <RadioButton Content="Writing Sign"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Command="{Binding DiscoveryViewCommand}"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked" />
 
-                <RadioButton Content="Featured"
+                <RadioButton Content="Writing Sentence"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Command="{Binding FeaturedViewCommand}"
+                             Style="{StaticResource MenuButtonTheme}" />
+
+                <RadioButton Content="Guia de Señas"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Command="{Binding LetterViewComand}"
                              Style="{StaticResource MenuButtonTheme}" />
             </StackPanel>
 

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5516ee39-236e-462c-ac75-9c3de5150436" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/HomeView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MainWindow.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="rama_union" />
+                    <option name="lastUsedInstant" value="1734329158" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1734329157" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -54,7 +78,7 @@
     "Python.testing.executor": "Run",
     "Python.testing_two.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "rama__union",
     "last_opened_file_path": "E:/UNT/Ciclo 06/Sistemas Inteligentes/Proyecto_Puntos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,7 +107,7 @@
       <updated>1734245924180</updated>
       <workItem from="1734245925583" duration="21508000" />
       <workItem from="1734280108749" duration="1299000" />
-      <workItem from="1734281428665" duration="30449000" />
+      <workItem from="1734281428665" duration="31229000" />
     </task>
     <servers />
   </component>

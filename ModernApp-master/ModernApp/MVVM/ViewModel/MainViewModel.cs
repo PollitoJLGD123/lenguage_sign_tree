@@ -7,10 +7,13 @@ namespace ModernApp.MVVM.ViewModel
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
         public RelayCommand FeaturedViewCommand { get; set; }
+        public RelayCommand LetterViewComand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
         public FeaturedViewModel FeaturedVM { get; set; }
+
+        public LetterViewModel LetterVM { get; set; }
 
         private object? _currentView;
         public object? CurrentView
@@ -25,6 +28,7 @@ namespace ModernApp.MVVM.ViewModel
             HomeVM = new HomeViewModel();
             DiscoveryVM = new DiscoveryViewModel();
             FeaturedVM = new FeaturedViewModel();
+            LetterVM = new LetterViewModel();
 
             CurrentView = HomeVM;
 
@@ -41,6 +45,11 @@ namespace ModernApp.MVVM.ViewModel
             FeaturedViewCommand = new RelayCommand(o =>
             {
                 CurrentView = FeaturedVM;
+            });
+
+            LetterViewComand = new RelayCommand(o =>
+            {
+                CurrentView = LetterVM;
             });
         }
     }
