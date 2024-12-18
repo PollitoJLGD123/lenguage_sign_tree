@@ -1,24 +1,64 @@
-❤️❤️
-El proyecto esta dedicado a la Inteligencia Artificial,
-tiene la capacidad de entrenar un modelo que sea capaz de clasificar todas 
-las letras del abecedario en señas, a través de la visión por computadora, usamos
-un modelo de entrenamiento llamado Bosque Aleatorio (RandomForest) como modelo, 
-el cual es un modelo dedicado a la clasificación de datos con diferentes salidas. 
-El cual era perfecto para nuestro proyecto debido a la cantidad de letras
-que posee nuestro abecedario. Se siguio 4 pasos, primero se hizo la recoleccion
-de un dataset propio, el cual consisitia en tomar 200 fotos de nuestra mano para
-cada letra del abecedario, todas estas fotos las guardamos en carpetas nombrando
-cada una de estas con el nombre de la letra. Luego dentro de esas carpetas
-recorrimos cada imagen y guardamos los puntos (Puntos extraídos de la libreria MEDIAPIPE)
-dentro de un modelo basico con extension H5. Despues accedemos al archivo, utilizamos 
-toda esta información almacenada para entrenar nuestro modelo de Bosque Aleatorio, 
-dandonos asi un archivo totalmente entrenado con extensión Joblib. Por último utilizamos 
-este modelo ya entrenado para la preodiccion y uso de lenguaje de señas. Obteniendo así una 
-precisión de más del 90%.
+# 🤟 **Sistema de Detección y Transcripción del Lenguaje de Señas Peruana**  
 
-1. Recaudar Imagenes
-2. Recorrer Puntos
-3. Create Model
-4. Testing
+Este proyecto utiliza **Inteligencia Artificial** y **Visión por Computadora** para entrenar un modelo capaz de clasificar todas las letras del abecedario en lenguaje de señas. Implementado con Python y la librería **Mediapipe**, el modelo utiliza el algoritmo **Random Forest (Bosque Aleatorio)**, ideal para tareas de clasificación con múltiples categorías como las letras del abecedario.  
 
-Espero les sea de gran ayude y les guste mucho. ❤️❤️❤️
+---
+
+## ✨ **Características Principales**  
+
+- Clasificación de todas las letras del abecedario en lenguaje de señas.  
+- Entrenamiento utilizando datos personalizados recolectados manualmente.  
+- Precisión superior al **90%** en las predicciones.  
+- Modelo optimizado para procesamiento en tiempo real.
+
+---
+
+## 📖 **Metodología del Proyecto**  
+
+El desarrollo del proyecto se realizó en **cuatro etapas clave**:  
+
+### 1. **Recolección del Dataset**  
+Se creó un dataset propio tomando **200 imágenes de la mano** para cada letra del abecedario. Estas imágenes se organizaron en carpetas individuales, nombradas según la letra correspondiente.  
+
+### 2. **Extracción de Puntos Clave**  
+Usamos la librería **Mediapipe** para extraer los puntos clave de las manos desde cada imagen del dataset. Estos puntos se almacenaron en un archivo con extensión `.h5` para su procesamiento.  
+
+### 3. **Entrenamiento del Modelo**  
+El algoritmo **Random Forest** fue entrenado utilizando los datos recolectados. El modelo procesó los puntos clave y generó un archivo entrenado con extensión `.joblib`, listo para realizar predicciones.  
+
+### 4. **Pruebas y Validación**  
+Se probó el modelo con datos de prueba para evaluar su precisión. Los resultados mostraron una precisión superior al **90%**, demostrando la efectividad del sistema.  
+
+---
+
+## 🔧 **Herramientas y Tecnologías Utilizadas**  
+
+- **Lenguaje**: Python  
+- **Librerías**: Mediapipe, Scikit-learn, Joblib  
+- **Modelo de IA**: Random Forest  
+
+---
+
+## 🚀 **Cómo Funciona**  
+
+1. **Recaudar Imágenes**: Captura imágenes de la mano representando cada letra del abecedario.  
+2. **Recorrer Puntos**: Extrae y almacena puntos clave de las imágenes con Mediapipe.  
+3. **Crear Modelo**: Entrena el modelo Random Forest con los datos extraídos.  
+4. **Testing**: Usa el modelo entrenado para clasificar señas en tiempo real.  
+
+---
+
+## ❤️ **Notas Finales**  
+
+Este proyecto busca facilitar la comunicación entre personas con discapacidad auditiva y oyentes, promoviendo la inclusión social mediante tecnología accesible y eficiente. ¡Espero que les sea de gran ayuda y les guste mucho! ❤️  
+
+---
+
+## 📫 **Contáctame**  
+
+Si tienes preguntas o comentarios, no dudes en contactarnos:  
+- **Email**: joseluisjlgd123@gmail.com
+- **GitHub**: https://github.com/PollitoJLGD123/PollitoJLGD123
+- 
+
+
