@@ -1,3 +1,4 @@
+❤️❤️
 El proyecto esta dedicado a la Inteligencia Artificial,
 tiene la capacidad de entrenar un modelo que sea capaz de clasificar todas 
 las letras del abecedario en señas, a través de la visión por computadora, usamos
@@ -20,4 +21,4 @@ precisión de más del 90%.
 3. Create Model
 4. Testing
 
-Espero les sea de gran ayude y les guste mucho.
+Espero les sea de gran ayude y les guste mucho. ❤️❤️❤️
