@@ -59,6 +59,5 @@ Este proyecto busca facilitar la comunicación entre personas con discapacidad a
 Si tienes preguntas o comentarios, no dudes en contactarnos:  
 - **Email**: joseluisjlgd123@gmail.com
 - **GitHub**: https://github.com/PollitoJLGD123/PollitoJLGD123
-- 
 
 
