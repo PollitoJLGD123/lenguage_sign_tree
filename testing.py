@@ -32,92 +32,96 @@ while True:
     if not ret:
         break
 
-    h, w, _ = frame.shape
-    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    try:
 
-    results = hands.process(frame_rgb)
-    if results.multi_hand_landmarks:
-        for hand_landmarks in results.multi_hand_landmarks:
-            mp_drawing.draw_landmarks(
-                frame,
-                hand_landmarks,
-                mp_hands.HAND_CONNECTIONS,
-                mp_drawing_styles.get_default_hand_landmarks_style(),
-                mp_drawing_styles.get_default_hand_connections_style())
+        h, w, _ = frame.shape
+        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-            for landmark in hand_landmarks.landmark:
-                x_.append(landmark.x)
-                y_.append(landmark.y)
+        results = hands.process(frame_rgb)
+        if results.multi_hand_landmarks:
+            for hand_landmarks in results.multi_hand_landmarks:
+                mp_drawing.draw_landmarks(
+                    frame,
+                    hand_landmarks,
+                    mp_hands.HAND_CONNECTIONS,
+                    mp_drawing_styles.get_default_hand_landmarks_style(),
+                    mp_drawing_styles.get_default_hand_connections_style())
 
-            for i in range(len(hand_landmarks.landmark)):
-                x = hand_landmarks.landmark[i].x
-                y = hand_landmarks.landmark[i].y
-                data_aux.append(x - min(x_))
-                data_aux.append(y - min(y_))
+                for landmark in hand_landmarks.landmark:
+                    x_.append(landmark.x)
+                    y_.append(landmark.y)
 
-            margen = 20
-            x1 = max(0, int(min(x_) * w) - margen)
-            y1 = max(0, int(min(y_) * h) - margen)
-            x2 = min(w, int(max(x_) * w) + margen)
-            y2 = min(h, int(max(y_) * h) + margen)
+                for i in range(len(hand_landmarks.landmark)):
+                    x = hand_landmarks.landmark[i].x
+                    y = hand_landmarks.landmark[i].y
+                    data_aux.append(x - min(x_))
+                    data_aux.append(y - min(y_))
 
-            prediction = model.predict([np.asarray(data_aux)])
-            predicted_character = encoder.inverse_transform(prediction)[0].decode('utf-8')
-            prediction_proba = model.predict_proba([np.asarray(data_aux)])
-            confidence = prediction_proba.max() * 100
+                margen = 20
+                x1 = max(0, int(min(x_) * w) - margen)
+                y1 = max(0, int(min(y_) * h) - margen)
+                x2 = min(w, int(max(x_) * w) + margen)
+                y2 = min(h, int(max(y_) * h) + margen)
 
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
+                prediction = model.predict([np.asarray(data_aux)])
+                predicted_character = encoder.inverse_transform(prediction)[0].decode('utf-8')
+                prediction_proba = model.predict_proba([np.asarray(data_aux)])
+                confidence = prediction_proba.max() * 100
 
-            hand_frame = frame[y1:y2, x1:x2].copy()
-            cv2.imshow('Mano Detectada', hand_frame)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
 
-            overlay = frame.copy()
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (100, 255, 0), 4)
-            cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
+                hand_frame = frame[y1:y2, x1:x2].copy()
+                cv2.imshow('Mano Detectada', hand_frame)
 
-            bar_x1, bar_y1 = x1, y1 - 20
-            bar_x2, bar_y2 = x1 + int((x2 - x1) * (confidence / 100)), y1 - 10
-            cv2.rectangle(frame, (bar_x1, bar_y1), (bar_x2, bar_y2), (0, 255, 0), -1)
-            cv2.putText(frame, f"{predicted_character} ({confidence:.2f}%)",
-                        (x1 + 5, y1 - 30),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.8, (155, 155, 30), 2, cv2.LINE_AA)
+                overlay = frame.copy()
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (100, 255, 0), 4)
+                cv2.addWeighted(overlay, 0.6, frame, 0.4, 0, frame)
 
-            key_press = cv2.waitKey(25) & 0xFF
+                bar_x1, bar_y1 = x1, y1 - 20
+                bar_x2, bar_y2 = x1 + int((x2 - x1) * (confidence / 100)), y1 - 10
+                cv2.rectangle(frame, (bar_x1, bar_y1), (bar_x2, bar_y2), (0, 255, 0), -1)
+                cv2.putText(frame, f"{predicted_character} ({confidence:.2f}%)",
+                            (x1 + 5, y1 - 30),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.8, (155, 155, 30), 2, cv2.LINE_AA)
 
-            if seguir:
-                if key_press == ord('s'):
-                    if predicted_character == "space":
-                        palabra += " "
-                        say = "space"
-                    else:
-                        palabra += predicted_character
-                        say = "Letra " + predicted_character
-                    hilo = threading.Thread(target=start_audio, args=(say,))
-                    hilo.start()
-                    letra_inicial = predicted_character
+                key_press = cv2.waitKey(25) & 0xFF
 
-                if key_press == ord('t') and palabra != "":
-                    seguir = False
-                    hilo1 = threading.Thread(target=start_audio,
-                                             args=("Tu escribiste la palabra: " + palabra,))
-                    hilo1.start()
-                    hilo2 = threading.Thread(target=start_audio,
-                                             args=("Presiona la letra 'C' para seguir escribiendo",))
-                    hilo2.start()
+                if seguir:
+                    if key_press == ord('s'):
+                        if predicted_character == "space":
+                            palabra += " "
+                            say = "space"
+                        else:
+                            palabra += predicted_character
+                            say = "Letra " + predicted_character
+                        hilo = threading.Thread(target=start_audio, args=(say,))
+                        hilo.start()
+                        letra_inicial = predicted_character
 
-                if key_press == ord('r') and palabra != "":
-                    palabra = palabra[:-1]
-                    say = "Letra eliminada"
-                    hilo = threading.Thread(target=start_audio, args=(say,))
-                    hilo.start()
+                    if key_press == ord('t') and palabra != "":
+                        seguir = False
+                        hilo1 = threading.Thread(target=start_audio,
+                                                 args=("Tu escribiste la palabra: " + palabra,))
+                        hilo1.start()
+                        hilo2 = threading.Thread(target=start_audio,
+                                                 args=("Presiona la letra 'C' para seguir escribiendo",))
+                        hilo2.start()
 
-            else:
-                cv2.putText(frame, "Presiona 'C' para seguir escribiendo", (50, 85),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200, 255, 100), 2, cv2.LINE_AA)
-                if key_press == ord('c'):
-                    seguir = True
-                    palabra = ""
+                    if key_press == ord('r') and palabra != "":
+                        palabra = palabra[:-1]
+                        say = "Letra eliminada"
+                        hilo = threading.Thread(target=start_audio, args=(say,))
+                        hilo.start()
+
+                else:
+                    cv2.putText(frame, "Presiona 'C' para seguir escribiendo", (50, 85),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (200, 255, 100), 2, cv2.LINE_AA)
+                    if key_press == ord('c'):
+                        seguir = True
+                        palabra = ""
+    except:
+        pass
 
     cv2.putText(frame, f"Palabra Actual: {palabra}", (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (130, 140, 255), 2, cv2.LINE_AA)
@@ -128,13 +132,13 @@ while True:
     cv2.imshow('Palabra Formada', word_frame)
 
     cv2.putText(frame, "Presiona 'S' para guardar una letra", (50, h - 120),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(frame, "Presiona 'T' para finalizar la palabra", (50, h - 90),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(frame, "Presiona 'R' para eliminar una letra", (50, h - 60),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(frame, "Presiona 'Q' para salir", (50, h - 30),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2, cv2.LINE_AA)
+                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
 
     cv2.imshow('frame', frame)
 

@@ -23,6 +23,45 @@ namespace ModernApp.MVVM.View
         public FeaturedView()
         {
             InitializeComponent();
+            btnConsultar.Click += Button_Click;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string palabra = txtPalabra.Text.ToLower();
+
+            var imagePaths = new List<BitmapImage>();
+
+            string imagenCompletaPath = @"E:\UNT\Ciclo 06\Sistemas Inteligentes\Proyect_Sklearn\ModernApp-master\ModernApp\Signs";
+
+            foreach (char letra in palabra)
+            {
+                string path = System.IO.Path.Combine(imagenCompletaPath, $"{letra}.jpg");
+
+                if (System.IO.File.Exists(path))
+                {
+                    var image = new BitmapImage();
+                    image.BeginInit();
+                    image.UriSource = new Uri(path, UriKind.Absolute);  
+                    image.CacheOption = BitmapCacheOption.OnLoad;
+                    image.EndInit();
+
+                    imagePaths.Add(image); 
+                }
+                else
+                {
+                    MessageBox.Show($"No se encontro la ruta {letra}");
+                }
+            }
+
+            imagesControl.ItemsSource = imagePaths;
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -4,10 +4,88 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ModernApp.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             Background="IndianRed">
-    <Grid>
-            
+             mc:Ignorable="d"
+             Background="IndianRed" Height="374" Width="713">
+    <Grid Background="#FFD7DC5B" Margin="0,-40,0,-15">
+        <!-- Header -->
+        <TextBlock Text="Controles de Interacción" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               FontSize="30" 
+               FontWeight="Bold" 
+               Foreground="#2D2D2D" 
+               Margin="61,67,0,0"
+               FontFamily="Century Gothic"/>
+
+        <!-- Instructions -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="67,125,0,-25">
+            <TextBlock Text="Presiona 'S' para guardar una letra"
+                   FontSize="20" 
+                   Foreground="#3F3F3F" 
+                   FontFamily="Century Gothic" 
+                   Margin="0,0,0,10"/>
+            <TextBlock Text="Presiona 'T' para finalizar la palabra"
+                   FontSize="20" 
+                   Foreground="#3F3F3F" 
+                   FontFamily="Century Gothic" 
+                   Margin="0,0,0,10"/>
+            <TextBlock Text="Presiona 'R' para eliminar una letra"
+                   FontSize="20" 
+                   Foreground="#3F3F3F" 
+                   FontFamily="Century Gothic" 
+                   Margin="0,0,0,10"/>
+        </StackPanel>
+
+        <!-- Button -->
+        <Button Content="Iniciar" 
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Top" 
+        Margin="62,260,0,0" 
+        Width="351" 
+        Height="60"
+        Background="#FF4B682F" 
+        Foreground="White" 
+        FontWeight="Bold" 
+        BorderBrush="Transparent" 
+        FontFamily="Century Gothic" 
+        FontSize="18"
+        Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="ButtonBorder" 
+                    Background="{TemplateBinding Background}" 
+                    CornerRadius="15" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="0">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!-- MouseOver Trigger -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBorder" Property="Background" Value="#5A8536"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <!-- Rectangle Section -->
+        <Rectangle HorizontalAlignment="Left" 
+               Width="216" 
+               Fill="#FFE3E5D9" 
+               Margin="452,29,0,29"
+               RadiusX="10" 
+               RadiusY="10"
+               StrokeThickness="0">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="0" Color="#888888"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <!-- Image -->
+        <Image Margin="471,82,64,82" Source="/Images/Frm2.png" Stretch="Fill"/>
     </Grid>
+
+
 </UserControl>

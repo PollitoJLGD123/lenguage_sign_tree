@@ -49,9 +49,9 @@ for dir_ in os.listdir(ruta_path):
             labels.append(dir_)
 
 h5_file = './points/data.h5'
-#with h5py.File(h5_file, 'w') as f:
- #   f.create_dataset('data', data=data)
-  #  f.create_dataset('labels', data=labels)
+with h5py.File(h5_file, 'w') as f:
+    f.create_dataset('data', data=data)
+    f.create_dataset('labels', data=labels)
 
 print(f'Datos guardados en {h5_file}')
 

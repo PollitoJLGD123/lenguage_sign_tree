@@ -24,6 +24,10 @@
                 <view:FeaturedView />
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:LetterViewModel}">
+                <view:LetterView />
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
