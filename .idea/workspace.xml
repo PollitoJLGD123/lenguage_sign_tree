@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5516ee39-236e-462c-ac75-9c3de5150436" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/DiscoveryView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/DiscoveryView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ModernApp-master/ModernApp/MVVM/View/FeaturedView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llamada_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/llamada_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guide_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorrer_puntos.py" beforeDir="false" afterPath="$PROJECT_DIR$/recorrer_puntos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,29 +70,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.create_model.executor": "Run",
-    "Python.guardar_imagenes.executor": "Run",
-    "Python.llamada_python.executor": "Run",
-    "Python.recaudar_imagenes.executor": "Run",
-    "Python.recorrer_puntos.executor": "Run",
-    "Python.sound_user.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.testing.executor": "Run",
-    "Python.testing_two.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "rama__union",
-    "last_opened_file_path": "E:/UNT/Ciclo 06/Sistemas Inteligentes/Proyecto_Puntos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.create_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.guardar_imagenes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.llamada_python.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recaudar_imagenes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recorrer_puntos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sound_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing_two.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;rama__union&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/UNT/Python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -111,7 +111,11 @@
       <updated>1734245924180</updated>
       <workItem from="1734245925583" duration="21508000" />
       <workItem from="1734280108749" duration="1299000" />
-      <workItem from="1734281428665" duration="43778000" />
+      <workItem from="1734281428665" duration="44377000" />
+      <workItem from="1734350577901" duration="1800000" />
+      <workItem from="1734353784370" duration="407000" />
+      <workItem from="1735153461255" duration="6766000" />
+      <workItem from="1737578530325" duration="680000" />
     </task>
     <servers />
   </component>
@@ -123,7 +127,7 @@
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$sound_user.coverage" NAME="sound_user Coverage Results" MODIFIED="1734308229306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$test.coverage" NAME="test Coverage Results" MODIFIED="1734258990987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$testing_two.coverage" NAME="testing_two Coverage Results" MODIFIED="1734320314968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Proyect_Sklearn$testing.coverage" NAME="testing Coverage Results" MODIFIED="1734298065227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Proyect_Sklearn$testing.coverage" NAME="testing Coverage Results" MODIFIED="1735162655824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$guardar_imagenes.coverage" NAME="guardar_imagenes Coverage Results" MODIFIED="1734250594696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$llamada_python.coverage" NAME="llamada_python Coverage Results" MODIFIED="1734338942778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Proyect_Sklearn$create_model.coverage" NAME="create_model Coverage Results" MODIFIED="1734294750468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

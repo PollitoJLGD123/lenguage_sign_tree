@@ -37,18 +37,17 @@ namespace ModernApp.MVVM.View
 
             foreach (char letra in palabra)
             {
-                // Construir la ruta a la imagen
                 string path = System.IO.Path.Combine(imagenCompletaPath, $"{letra}.jpg");
 
                 if (System.IO.File.Exists(path))
                 {
                     var image = new BitmapImage();
                     image.BeginInit();
-                    image.UriSource = new Uri(path, UriKind.Absolute);  // Usar UriKind.Absolute para rutas absolutas
+                    image.UriSource = new Uri(path, UriKind.Absolute);  
                     image.CacheOption = BitmapCacheOption.OnLoad;
                     image.EndInit();
 
-                    imagePaths.Add(image); // Agregar la imagen a la lista
+                    imagePaths.Add(image); 
                 }
                 else
                 {
